@@ -20,10 +20,10 @@ class MailViewController: UIViewController {
     
     func setLogInState(loggedIn: Bool) {
         if (loggedIn) {
-            loginButton.setTitle("Log Out", for: UIControlState.normal)
+            loginButton.setTitle("Log Out", for: UIControl.State.normal)
         }
         else {
-            loginButton.setTitle("Log In", for: UIControlState.normal)
+            loginButton.setTitle("Log In", for: UIControl.State.normal)
         }
     }
     
@@ -70,7 +70,7 @@ class MailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         tableView.estimatedRowHeight = 90;
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         setLogInState(loggedIn: service.isLoggedIn)
         if (service.isLoggedIn) {
